@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "codegen": "graphql-codegen --config codegen.yml",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -17,6 +18,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@graphql-codegen/cli": "^3.0.0",
+    "@graphql-codegen/typescript": "^3.0.0",
+    "@graphql-codegen/typescript-resolvers": "^3.0.0",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",

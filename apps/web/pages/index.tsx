@@ -1,19 +1,16 @@
 import { gql, useQuery } from "@apollo/client";
+import { Book } from "../types/generated/graphql";
 
 const query = gql`
   {
-    books {
-      title
-      author
-    }
+    books
   }
 `;
 
 export default function Web() {
-  const { loading, error, data } = useQuery(query);
+  const { loading, error, data } = useQuery<{ books: Book[] }>(query);
 
-  console.log({ loading, error, data });
-  if (loading) return <p>loading...</p>;
+  if (loading || data == null) return <p>loading...</p>;
   if (error) return <p>error: {JSON.stringify(error, null, 2)}</p>;
 
   return (

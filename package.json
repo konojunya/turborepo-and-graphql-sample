@@ -6,7 +6,8 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "turbo run dev"
+    "dev": "turbo run dev",
+    "codegen": "turbo run codegen"
   },
   "devDependencies": {
     "gts": "^3.1.1",
